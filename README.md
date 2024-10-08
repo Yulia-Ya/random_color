@@ -1,3 +1,5 @@
+I initially wanted to create a simple color generator, but when I saw the [Random Color Generator](https://randomwordgenerator.com/color.php), I got inspired by the idea and implemented it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
