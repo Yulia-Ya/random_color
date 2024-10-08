@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect } from "react";
 import { Button } from "../Button";
 import s from "./CardsSettings.module.css";
 
@@ -32,16 +32,19 @@ export const CardsSettings = ({ count, setColors, setCount, setCardCount }: Prop
     for (let i = 0; i < count; i++) {
       colors.push(generateRandomRgb());
     }
-
     setCardCount(count);
     setColors(colors);
   };
+
+  useEffect(() => {
+    setHandler();
+  }, []);
 
   //disabled={}
   return (
     <div className={s.settings_container}>
       <span>Number of Colors: </span>
-      <input className={s.editable_input} type="number" value={count} onChange={setAmountCardValue} />
+      <input className={s.editable_input} type="number" min="0" value={count} onChange={setAmountCardValue} />
       <Button title="Generate random color" onClick={setHandler} />
     </div>
   );

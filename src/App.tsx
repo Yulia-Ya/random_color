@@ -8,6 +8,8 @@ function App() {
   const [count, setCount] = useState(1);
   const [cardCount, setCardCount] = useState(1);
 
+ 
+
   return (
     <div className="App">
       <h1>Random Color Generator</h1>
